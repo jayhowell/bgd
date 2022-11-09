@@ -11,7 +11,7 @@ spec:
     repoURL: https://github.com/jayhowell/bgd
     targetRevision: main
   destination:
-    namespace: bgd
+    namespace: openshift-gitops
     server: https://kubernetes.default.svc
   syncPolicy:
     syncOptions:
