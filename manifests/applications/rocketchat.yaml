@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: rocket-chat
+  namespace: openshift-gitops
+spec:
+  project: default
+  source:
+    path: rocketchat
+    repoURL: https://github.com/levenhagen/rocketchat-acm.git
+    targetRevision: main
+  destination:
+    namespace: rocket-chat
+    server: https://kubernetes.default.svc
+  syncPolicy:
+    syncOptions:
+      - CreateNamespace=true
+    automated:
+      prune: true
+      selfHeal: true
