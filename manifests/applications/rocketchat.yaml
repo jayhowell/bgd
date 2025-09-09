@@ -7,7 +7,7 @@ spec:
   project: default
   source:
     path: rocketchat
-    repoURL: https://github.com/levenhagen/rocketchat-acm.git
+    repoURL: https://github.com/jayhowell/rocketchat.git
     targetRevision: main
   destination:
     namespace: rocket-chat
